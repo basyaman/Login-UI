@@ -1,45 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
 
-    <!--background shapes-->
-    <div class="blob 1"></div>
-    <div class="blob 2"></div>
-    <div class="blob 3"></div>
-    <div class="blob 4"></div>
+    <!-- PAGE WRAPPER -->
+    <div class="page-wrapper">
 
-    <!--centered card-->
-    <div class="auth-card">
-        <div class="auth-header"></div>
-        <div class="logo-box">CutLab</div>
-        <div class="menu-lines"></div>
-    </div>
+      <!-- Background blobs -->
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+      <div class="blob b4"></div>
 
-    <!--avatar and welcome text-->
-    <div class="hero-row">
-        <div class="avatar"></div>
-        <div class="hero-text">
-            <small>Cut Laboratory</small>
-            <h1>Welcome<br>Back!</h1>
+      <!-- AUTH CARD -->
+      <div class="auth-card">
+
+        <!-- Card shapes -->
+        <div class="card-shape s1"></div>
+        <div class="card-shape s2"></div>
+
+        <!-- Header -->
+        <div class="auth-header">
+          <div class="logo-box">CutLab</div>
         </div>
-    </div>
 
-    <!--tab bar-->
-    <div class="tab-bar">
-        <div class="tab active" data-target="login">Login</div>
-        <div class="tab" data-target="signup">Sign up</div>
-    </div>
+        <!-- Avatar + Welcome -->
+        <div class="hero-row">
+          <div class="avatar"></div>
+          <div class="hero-text">
+            <small>Cut Laboratory</small>
+            <h1>Welcome<br />Back!</h1>
+          </div>
+        </div>
 
-    <!--login form-->
-    form
+        <!-- Tabs -->
+        <div class="tab-bar">
+          <div class="tabs-pill">
+            <span class="tab-indicator"></span>
+              <div class="tab active" data-target="login">Login</div>
+              <div class="tab" data-target="signup">Sign up</div>
+          </div>
+        </div>
 
+        <!-- FORM WRAPPER -->
+        <div class="form-wrapper">
 
+          <!-- LOGIN FORM -->
+          <form id="login-form" class="form active">
+            <div class="field">
+              <label for="username">Username</label>
+              <input type="text" id="username" placeholder="Your user name" required />
+            </div>
 
-</body>
+            <div class="field">
+              <label for="password">Password</label>
+              <input type="password" id="password" placeholder="Your password" required />
+            </div>
+
+            <div class="forgot-row">
+              <a href="#">Forgot password?</a>
+            </div>
+
+            <button class="btn-primary" type="submit">Login</button>
+
+            <div class="bottom-text">
+              Don't have an account? <span id="go-signup">Sign up</span>
+            </div>
+          </form>
+
+          <!-- SIGNUP FORM -->
+          <form id="signup-form" class="form">
+            <div class="field">
+              <label for="create-username">Username</label>
+              <input type="text" id="create-username" placeholder="Create a username" required />
+            </div>
+
+            <div class="field">
+              <label for="full-name">Full name</label>
+              <input type="text" id="full-name" placeholder="Your full name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Your email address" required />
+            </div>
+
+            <div class="field">
+              <label for="signup-password">Password</label>
+              <input type="password" id="signup-password" placeholder="Create a password" required />
+            </div>
+
+            <div class="field">
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" id="confirm-password" placeholder="Confirm your password" required />
+            </div>
+
+            <button class="btn-primary" type="submit">Create Account</button>
+
+            <div class="bottom-text">
+              Already have an account? <span id="go-login">Login</span>
+            </div>
+          </form>
+
+        </div> <!-- END form-wrapper -->
+
+      </div> <!-- END auth-card -->
+
+    </div> <!-- END page-wrapper -->
+
+    <script src="index.js"></script>
+  </body>
 </html>

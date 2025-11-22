@@ -8,6 +8,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -38,7 +40,7 @@
           <div class="avatar"></div>
           <div class="hero-text">
             <small>Cut Laboratory</small>
-            <h1>Welcome<br />Back!</h1>
+            <h1>Welcome<br/>Back!</h1>
           </div>
         </div>
 
@@ -72,44 +74,95 @@
 
             <button class="btn-primary" type="submit">Login</button>
 
-            <div class="bottom-text">
-              Don't have an account? <span id="go-signup">Sign up</span>
-            </div>
           </form>
 
           <!-- SIGNUP FORM -->
           <form id="signup-form" class="form">
+
+           <!-- step1 name + username -->
+          <div class="step step-1 active">
+            <div class="field">
+              <label for="full-name">Full name</label>
+              <input type="text" id="full-name" placeholder="Your full name" required />
+          </div>
+
             <div class="field">
               <label for="create-username">Username</label>
               <input type="text" id="create-username" placeholder="Create a username" required />
             </div>
+          </div>
 
-            <div class="field">
-              <label for="full-name">Full name</label>
-              <input type="text" id="full-name" placeholder="Your full name" required />
+<div class="step step-2">
+  <div class="field">
+    <div class="field-label-row">
+      <label for="email">Email</label>
+      <button type="button" class="link-btn" id="verify-email-btn"> <!--Fetch garne-->
+        Send code
+      </button>
+    </div>
+    <input type="email" id="email" placeholder="Your email address" required />
+  </div>
+
+  <div class="field">
+    <label for="code">Verification Code</label>
+
+    <div class="otp-wrapper">
+      <input type="text" class="otp-input" maxlength="1" inputmode="numeric" />   
+      <input type="text" class="otp-input" maxlength="1" inputmode="numeric" />
+      <input type="text" class="otp-input" maxlength="1" inputmode="numeric" />
+      <input type="text" class="otp-input" maxlength="1" inputmode="numeric" />
+      <input type="text" class="otp-input" maxlength="1" inputmode="numeric" />
+      <input type="text" class="otp-input" maxlength="1" inputmode="numeric" />
+    </div>
+
+    <input type="hidden" id="verification-code" name="verification-code">
+  </div>
+</div>
+
+
+
+            <!-- step3 password creation -->
+            <div class="step step-3">
+              <div class="field">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" placeholder="Create a password" required />
+              </div>
+
+              <div class="field">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm your password" required />
+              </div>
             </div>
 
-            <div class="field">
-              <label for="email">Email</label>
-              <input type="email" id="email" placeholder="Your email address" required />
-            </div>
+          <!-- step-navigation button  -->
 
-            <div class="field">
-              <label for="signup-password">Password</label>
-              <input type="password" id="signup-password" placeholder="Create a password" required />
+            <div class="step-nav">
+                <div class="btn-container">
+                   <button class="btn-primary"  type="button" id="prev-btn">'
+                    <span>Back</span>
+                     <i class='bx bx-left-arrow-alt'></i>
+                   </button>
+                   <button class="btn-primary" type="button" id="next-btn">
+                    <span>Next</span>
+                    <i class='bx bx-right-arrow-alt'></i>
+                   </button> 
+                  
+                </div>  
             </div>
+       
+            
 
-            <div class="field">
-              <label for="confirm-password">Confirm Password</label>
-              <input type="password" id="confirm-password" placeholder="Confirm your password" required />
-            </div>
 
-            <button class="btn-primary" type="submit">Create Account</button>
+           
 
-            <div class="bottom-text">
-              Already have an account? <span id="go-login">Login</span>
-            </div>
-          </form>
+            
+
+          
+
+            
+          </form> <!--end of signup form-->
+
+
 
         </div> <!-- END form-wrapper -->
 

@@ -37,7 +37,7 @@ forms.forEach(form=>{
 
 function updateWelcome(type){
  
-    const heroHeading = document.querySelector('.hero-text h1');
+    const heroHeading = document.querySelector('.hero-title h1');
     if(!heroHeading) return;
     const welcomeMessages = {
         signup : 'Welcome<br/>Aboard!',
@@ -53,7 +53,7 @@ const emailInput = document.getElementById('email');
 const otpInputs = document.querySelectorAll('.otp-input');
 const hiddenOtpInput = document.getElementById('verification-code');
 
-// //send code when clcikingf send  code
+ //send code when clicking send  code
 verifyEmailBtn.addEventListener('click',async()=>{
     const email = emailInput.value.trim();
     if(!email){
@@ -114,6 +114,9 @@ function updateStepUI(){
         nextBtn.innerHTML = `<span>Create Account</span>`;
     } else {
         nextBtn.innerHTML = `<span>Next</span><i class='bx bx-right-arrow-alt'></i>`;
+    }
+    if(currentStep === 2){
+        nextBtn.innerHTML = `<span>Verify</span>`
     }
 
 

@@ -40,11 +40,28 @@ function updateWelcome(type){
     const heroHeading = document.querySelector('.hero-title h1');
     if(!heroHeading) return;
     const welcomeMessages = {
-        signup : 'Welcome<br/>Aboard!',
-        login : 'Welcome<br/>Back!'
+        signup : 'Welcome Aboard!',
+        login : 'Welcome Back!'
     };
     heroHeading.innerHTML = welcomeMessages[type] || '';
 }
+//password show garne
+const passwordInput = document.getElementById('password');
+
+const eyeClose = document.querySelector('.eye-icon.closed');
+const eyeOpen = document.querySelector('.eye-icon.open');
+
+eyeClose.addEventListener('click',()=>{
+    passwordInput.type = 'text';
+    eyeClose.classList.remove('active');
+    eyeOpen.classList.add('active');
+});
+eyeOpen.addEventListener('click',()=>{
+    passwordInput.type = 'password';
+    eyeClose.classList.add('active');
+    eyeOpen.classList.remove('active');
+});
+
 
 //fetch garne verifcatoin code button
 

@@ -233,6 +233,20 @@ form{
     flex-direction: column;
     margin-bottom:12px;
 }
+.eye-icon{
+    cursor: pointer;
+    position: absolute;
+    top: 48%;
+    right:14px;
+    transform:translateY(-60%);
+    color:#12345B;
+    display: none;
+    font-weight: 600;
+}
+.eye-icon.active{
+    display:block
+}
+
 .otp-wrapper {
   display: flex;
   gap: 8px;
@@ -249,9 +263,10 @@ form{
   outline: none;
 }
 
+
 .otp-input:focus {
   border-color: #4b7cff; /* or your primary color */
-  box-shadow: 0 0 0 1px rgba(75, 124, 255, 0.3);
+  box-shadow: 0 0 0 1px rgba(75, 124, 255, 0.2);
 }
 
 .field label{
@@ -274,6 +289,7 @@ form{
 .field input::placeholder {
       color: #9BA4B6;
 }
+
 .forgot-row{
     text-align: right;
     font-size: 14px;
@@ -283,6 +299,9 @@ form{
     text-decoration: none;
     color: #234B76;
     font-weight: 500;
+}
+.forgot-row a:hover{
+    color: #4b7cff;
 }
 .btn-primary{
     width: 100%;               /* ⬅ let flex handle it */
@@ -315,7 +334,7 @@ form{
 .btn-primary i{
     font-size: 18px;
 }
-.btn-
+
 
 .btn-primary:hover {
   transform: translateY(-2px);

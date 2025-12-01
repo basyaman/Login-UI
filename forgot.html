@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="forgot.css" />
 </head>
 
@@ -24,11 +25,12 @@
 
             <!-- Avatar + Welcome -->
             <div class="hero-illustration">
-                <img src="assests/barbershop team-pana (1).svg" alt="barber" />
+                <img src="assests/Forgot password-bro.svg" alt="barber" />
             </div>
 
             <div class="hero-title">
-                <h1>Recover your account</h1>
+                <small>THE CUTLAB</small>
+                <h2>Recover your account</h2>
             </div>
 
             <!-- Form wrapper-->
@@ -68,7 +70,7 @@
                     <!--Step3-->
                     <div class="step step-3">
                         <div class="field">
-                            <h2>Do you want to change your password?</h2>
+                           
 
                             <div class="options">
                                 <button type="button" id="change-password-yes" class="all-btn yes">Yes</button>
@@ -79,21 +81,21 @@
 
                     <!--step4-->
                     <div class="step step-4">
-                        <h2>Create Password</h2>
+                       
 
                         <div class="field">
                             <label for="new-password">New Password</label>
-                            <input type="password" id="new-password" required />
+                            <input class="pass" type="password" id="new-password" required />
                         </div>
 
                         <div class="field">
                             <label for="confirm-password">Confirm Password</label>
-                            <input type="password" id="confirm-password" required />
+                            <input class="pass" type="password" id="confirm-password" required />
                             <i class="bx bx-hide eye-icon closed active"></i>
                             <i class="bx bx-show eye-icon open"></i>
                         </div>
 
-                        <button type="submit" class="all-btn change">Change Password</button>
+                        <button type="submit" id="change-pass" class="all-btn change">Change Password</button>
                     </div>
                 </form>
             </div>
